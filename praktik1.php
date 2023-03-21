@@ -1,5 +1,6 @@
 <?php
 
+
 //pemanggilan di php
 echo 'hallo world';
 
@@ -14,8 +15,9 @@ echo 'Nama Siswa : '.$namaSiswa;
 echo '<br>Umur : '.$umur;
 echo '<br>Berat Badan : '.$berat_badan;
 echo '<br>Pekerjaan : '.$_pekerjaan;
-
 ?>
+
+<!-- ini adalah pemanggilan dengan menggunakan document HTML -->
 <hr>
 Nama Siswa : <?= $namaSiswa ?>
 <br>Umur : <?= $umur ?>
