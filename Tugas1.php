@@ -61,7 +61,7 @@
                     $sisimiring = $_POST['sisimiring'];
 
                     $kel_jajar_genjang = 2 * ($alas + $sisimiring);
-                    echo 'Hasil Perhitungan Luas Jajar Genjang';
+                    echo 'Hasil Perhitungan Keliling Jajar Genjang';
                     echo '<br>Diketahui : ';
                     echo '<br>Alas : '.$alas.' cm';
                     echo '<br>Tinggi : '.$sisimiring.' cm';
