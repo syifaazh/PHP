@@ -85,7 +85,7 @@
             // menentukan gaji pokok menggunakan switch case
             switch ($pekerjaan){
                 case 'Manager' : $g_pokok = 20000000; break;
-                case 'Asiiten' : $g_pokok = 15000000; break;
+                case 'Asisten' : $g_pokok = 15000000; break;
                 case 'Kepala_Bagian' : $g_pokok = 10000000; break;
                 case 'Staff' : $g_pokok = 4000000; break;
                 default: $g_pokok = "";
@@ -96,9 +96,9 @@
 
 
             // menentukan tunjangan keluarga menggunakan if multi kondisi
-                if( $status=="menikah" && $anak == 2 ){
+                if( $status=="Menikah" && $anak == 2 ){
                     $t_keluarga = 0.05 * $g_pokok;
-                }else if( $status=="menikah" && $anak >=3 && $anak <=5){
+                }else if( $status=="Menikah" && $anak >=3 && $anak <=5){
                     $t_keluarga = 0.1 * $g_pokok;
                 }else{
                     $t_keluarga = 0;
