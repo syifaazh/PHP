@@ -29,4 +29,15 @@ while($yz >=1){
     $yz--;
 }
 
+//contoh do while
+echo '<hr>';
+echo '<h3>looping menggunakan do while</h3>';
+$d=1;
+do{
+    echo '<br>'.$d;
+    $d++;
+}
+while($d <= 10);
+
+
 ?>
