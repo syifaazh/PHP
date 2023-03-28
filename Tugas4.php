@@ -1,4 +1,5 @@
 <?php
+//Array
 $m1 = ['NIM'=>'2008107010001', 'Nama'=> 'Agis', 'Nilai'=>80];
 $m2 = ['NIM'=>'2008107010002', 'Nama'=> 'Berly', 'Nilai'=>69];
 $m3 = ['NIM'=>'2008107010003', 'Nama'=> 'Cantika', 'Nilai'=>90];
@@ -7,9 +8,11 @@ $m5 = ['NIM'=>'2008107010005', 'Nama'=> 'Eja', 'Nilai'=>79];
 $m6 = ['NIM'=>'2008107010006', 'Nama'=> 'Fany', 'Nilai'=>43];
 $m7 = ['NIM'=>'2008107010007', 'Nama'=> 'Gilang', 'Nilai'=>72];
 $m8 = ['NIM'=>'2008107010008', 'Nama'=> 'Hilma', 'Nilai'=>76];
+
 $mahasiswa = [$m1, $m2, $m3, $m4, $m5, $m6, $m7, $m8];
 $ar_judul = ['No','NIM','Nama','Nilai','Keterangan','Grade','Predikat'];
 
+//Menambahkan beberapa fungsi
 $jumlah_mhs = count($mahasiswa);
 $jumlah_nilai = array_column($mahasiswa, 'Nilai');
 $total_nilai = array_sum($jumlah_nilai);
@@ -40,9 +43,10 @@ $keterangan = [
         $no=1;
         $row="";
         foreach($mahasiswa as $mhs){
-            $warna = $no % 2 == 1 ? 'lightgrey' : 'white';
+            $warna = $no % 2 == 1 ? 'lightgrey' : 'white'; //penambahan warna
             $ket = ($mhs['Nilai']>=60) ? 'Lulus' : 'Tidak Lulus';
-            //grade
+
+            //menentukan grade menggunakan if multi kondisi
             if($mhs ['Nilai'] >=85 && $mhs['Nilai'] <= 100) $grade = 'A';
             else if($mhs ['Nilai'] >= 75 && $mhs['Nilai'] <= 84) $grade = 'B';
             else if($mhs ['Nilai'] >= 60 && $mhs['Nilai'] <= 74) $grade = 'C';
@@ -50,7 +54,7 @@ $keterangan = [
             else if($mhs ['Nilai'] >= 0 && $mhs['Nilai'] <= 29) $grade = 'E';
             else $grade = '';
 
-            //predikat
+            //menentukan predikat menggunakan switch case
             switch ($grade){
                 case "A" : $predikat = "Memuaskan"; break;
                 case "B" : $predikat = "Bagus"; break;
@@ -60,6 +64,7 @@ $keterangan = [
                 default: $predikat = "";
             }
             ?>
+            <!-- pemanggilan data mahasiswa, grade , dan predikat -->
             <tr align='center' bgcolor = "<?= $warna; ?>">
                 <td><?= $no ?></td>
                 <td><?= $mhs['NIM'] ?></td>
@@ -74,6 +79,8 @@ $keterangan = [
             $no++; }
             ?>
     </tbody>
+
+    <!-- Pemanggilan Keterangan jumlah mahasiswa, nilai tertinggi, nilai terendah, rata rata didalam tfoot     -->
     <tfoot>
         <?php
         foreach($keterangan as $ket => $hasil){
