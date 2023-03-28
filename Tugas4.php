@@ -41,7 +41,6 @@ $keterangan = [
     <tbody>
         <?php
         $no=1;
-        $row="";
         foreach($mahasiswa as $mhs){
             $warna = $no % 2 == 1 ? 'lightgrey' : 'white'; //penambahan warna
             $ket = ($mhs['Nilai']>=60) ? 'Lulus' : 'Tidak Lulus';
