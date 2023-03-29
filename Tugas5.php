@@ -5,7 +5,7 @@ $domisili = ['Jakarta', 'Bandung', 'Surabaya', 'Bekasi', 'Malang', 'Lainnya'];
 
 ?>
 
-<fieldset style="background-color:E4DCCF; width: 50%; right: 80px; position:absolute; top: 100px; left: 25%;">
+<fieldset style="background-color:E4DCCF; width: 50%; right: 80px; position:absolute; top: 70px; left: 25%;">
     <legend align='center'><h3>Form Registrasi Kelompok Belajar</h3></legend>
     <table >
         <thead>
@@ -72,6 +72,13 @@ $domisili = ['Jakarta', 'Bandung', 'Surabaya', 'Bekasi', 'Malang', 'Lainnya'];
                             
                         </select>
                     </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>:</td>
+                    <td><input type='email' name='email'></td>
+                </tr>
+               
         </tbody>
         <tfoot>
             <tr>
@@ -85,7 +92,7 @@ $domisili = ['Jakarta', 'Bandung', 'Surabaya', 'Bekasi', 'Malang', 'Lainnya'];
 </fieldset>
 
 
-<fieldset style="background-color:E4DCCF; width: 50%; right: 80px; position:absolute; top: 370px; left: 25%;">
+<fieldset style="background-color:E4DCCF; width: 50%; right: 80px; position:absolute; top: 360px; left: 25%;">
 <?php
 
 error_reporting(0);
@@ -97,7 +104,9 @@ if(isset($_POST['proses'])){
     $prodi = $_POST['prodi'];
     $skill = $_POST['skill'];
     $domisili = $_POST['domisili'];
+    $email = $_POST['email'];
 
+    //Menentukan total skor
     $skor = 0;
     foreach($skill as $sk){
         if (isset($ar_skill[$sk])){
@@ -106,6 +115,7 @@ if(isset($_POST['proses'])){
     }
 }
 
+//penggunaan fungsi untuk menentukan katogeri skill    
 function skor_skill($skor){
     if($skor >= 100 && $skor <= 150){
         return "Sangat Baik";
@@ -123,6 +133,7 @@ function skor_skill($skor){
 ?>
 <br><br>
 
+<!-- table untuk menampilkan output  -->
     <table>
         <tbody>
                 <form>
@@ -170,6 +181,12 @@ function skor_skill($skor){
                         <td>Domisili </td>
                         <td>:</td>
                         <td><?= $domisili ?></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>:</td>
+                        <td><?= $email ?></td>
+                </tr>
         </tbody>
     </table>
 </fieldset>
