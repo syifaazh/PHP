@@ -13,7 +13,7 @@ function hitung($a1, $a2, $tombol){
     <div class = 'inputan'>
         <label for='a1'>Angka 1
         <input type='text' id='a1' name='a1'></label><br>
-        <label for='a1'>Angka 2
+        <label for='a2'>Angka 2
         <input type='text' id='a2' name='a2'></label><br>
 
         <input type='submit' name='tombol' value='+'>

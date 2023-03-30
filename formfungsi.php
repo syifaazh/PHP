@@ -95,7 +95,8 @@ Jenis Kelamin : <?= $jk ?><br>
 Prodi : <?= $prodi ?><br>
 Skill :
 <?php
-foreach($skill as $s){ ?>
-<?= $s ?>,
+foreach($skill as $s){ 
+    ?>
+    <?= $s ?>,
 <?php } ?>
 <br>Domisili : <?= $domisili ?>
