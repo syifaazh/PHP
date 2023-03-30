@@ -1,5 +1,6 @@
 <?php
     class Pegawai{
+        //member variables
         protected $nip;
         public $nama;
         private $jabatan;
@@ -8,6 +9,8 @@
         static $jml = 0;
         const PT = 'PT. HTP Indonesia';
 
+
+        //constructor untuk menyimpan variable yang akan dikirimkan ke file object
         public function __construct($nip, $nama, $jabatan, $agama, $status){
             $this->nip = $nip;
             $this->nama = $nama;
@@ -17,6 +20,8 @@
             self::$jml++;
             
         }
+
+        //menentukan gaji pokok
         public function setGajiPokok($jabatan){
             $this->jabatan = $jabatan;
             switch($jabatan){
@@ -29,44 +34,53 @@
             return $gapok;
         }
 
+        //menentukan Tunjangan Jabatan
         public function setTunjab($jabatan){
             $this->jabatan = $jabatan;
             $tunjab = $this->setGajiPokok($jabatan) * 0.2;
             return $tunjab;
         }
 
+        //menentukan Tunjangan Keluarga
         public function setTunkel($status){
             $this->status = $status;
             $tunkel = ($this->status == 'Menikah') ? $this->setGajiPokok($this->jabatan) * 0.1 : 0;
             return $tunkel;
         }
 
+        //menentukan Zakat 
         public function setZakatProfesi($agama){
             $this->agama = $agama;
             $zakat = ($this->agama == 'Islam' && $this->setGajiPokok($this->jabatan) > 6000000) ? $this->setGajiPokok($this->jabatan) * 0.025 : 0;
             return $zakat;
         }
 
+        //mendapatkan nilai gaji pokok yang sudah diatur pada setGajiPokok
         public function getGajiPokok(){
             return $this->setGajiPokok($this->jabatan);
         }
 
+        //mendapatkan nilai Tunjangan Jabatan yang sudah diatur pada setTunjab
         public function getTunjab(){
             return $this->setTunjab($this->jabatan);
         }
 
+        //mendapatkan nilai Tunkel yang sudah diatur pada setTunkel
         public function getTunkel(){
             return $this->setTunkel($this->status);
         }
 
+        //mendapatkan nilai Zakat yang sudah diatur pada setZakatProfesi
         public function getZakatProfesi(){
             return $this->setZakatProfesi($this->agama);
         }
 
+        //menentukan nilai gaji
         public function getGajiBersih(){
             return $this->getGajiPokok() + $this->getTunjab() + $this->getTunkel() - $this->getZakatProfesi();
         }
 
+        //mencetak output
         public function cetak(){
             echo "NIP : ".$this->nip."<br>";
             echo "Nama : ".$this->nama."<br>";
