@@ -9,6 +9,12 @@ class mahasiswa extends person{
         $this->semester = $semester;
         $this->jurusan = $jurusan;
     }
+    public function cetak(){
+        parent::cetak();
+        echo '<br>Semester: '.$this->semester;
+        echo '<br>Jurusan: '.$this->jurusan;
+        echo "<br><hr>";
+    }
 }
 
 ?>

@@ -7,8 +7,8 @@ class person{
         $this->gender = $gender;
     }
     public function cetak(){
-        echo 'Nama ' . $this->nama;
-        echo 'Jenis Kelamin' . $this->gender;
+        echo 'Nama : ' . $this->nama;
+        echo '<br>Jenis Kelamin : ' . $this->gender;
     }
 }
 

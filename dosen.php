@@ -10,9 +10,9 @@ class dosen extends person{
     }
     public function cetak(){
         parent::cetak();
-        echo 'NIDN : '.$this->nidn;
-        echo 'Gelar : '.$this->gelar;
-        echo '<hr>';
+        echo '<br>NIDN : '.$this->nidn;
+        echo '<br>Gelar : '.$this->gelar;
+        echo '<br><hr>';
     }
 }
 
