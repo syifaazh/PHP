@@ -20,14 +20,6 @@ class persegiPanjang extends Bentuk2D {
         $keliling = 2 * $this->panjang + 2 * $this->lebar;
         return $keliling;
     }
-    public function cetak(){
-        $this -> namaBidang();
-        echo '<br>Panjang '.$this->panjang;
-        echo '<br>Lebar '.$this->lebar;
-        echo '<br>Luas Bidang : ' .$this->LuasBidang();
-        echo '<br>Keliling Bidang : ' .$this->kelilingBidang();
-        echo '<hr>';
-    }
 
 }
 ?>
