@@ -1,6 +1,6 @@
 <?php
-include_once 'top.php';
-include_once 'menu.php';
+// include_once 'top.php';
+// include_once 'menu.php';
 
 ?>
 <h1 class="mt-4">Tables</h1>
