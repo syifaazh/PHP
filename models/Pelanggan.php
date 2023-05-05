@@ -8,7 +8,8 @@ class Pelanggan{
     }
     public function Pelanggan()
     {
-        $sql = "SELECT * FROM pelanggan";
+        $sql = "SELECT * FROM Pelanggan p
+        LEFT JOIN kartu k ON k.id = p.kartu_id;";
         $ps = $this->koneksi->prepare($sql);
         $ps->execute();
         $rs = $ps->fetchAll();

@@ -2,7 +2,7 @@
 // include_once 'top.php';
 // include_once 'menu.php';
 $model = new Kartu();
-$jenis_produk = $model->Kartu();
+$Kartu = $model->Kartu();
 
 // foreach ($data_produk as $row){    
 //     print $row['kode'];
@@ -48,7 +48,7 @@ $jenis_produk = $model->Kartu();
             <tbody>
                 <?php
                 $no = 1;
-                foreach ($jenis_produk as $row){
+                foreach ($Kartu as $row){
 
                 ?>
                 <tr>

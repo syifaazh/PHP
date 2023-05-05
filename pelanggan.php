@@ -2,7 +2,7 @@
 // include_once 'top.php';
 // include_once 'menu.php';
 $model = new Pelanggan();
-$jenis_produk = $model->Pelanggan();
+$Pelanggan = $model->Pelanggan();
 
 // foreach ($data_produk as $row){    
 //     print $row['kode'];
@@ -38,7 +38,9 @@ $jenis_produk = $model->Pelanggan();
                     <th>Tanggal Lahir</th>
                     <th>Email</th>
                     <th>Alamat</th>
-                    <th>Kartu Id</th>
+                    <th>Nama Kartu</th>
+                    <th>Diskon</th>
+                    <th>Iuran</th>
                 </tr>
             </thead>
             <tfoot>
@@ -51,12 +53,14 @@ $jenis_produk = $model->Pelanggan();
                     <th>Tanggal Lahir</th>
                     <th>Email</th>
                     <th>Alamat</th>
-                    <th>Kartu Id</th>
+                    <th>Nama Kartu</th>
+                    <th>Diskon</th>
+                    <th>Iuran</th>
             </tfoot>
             <tbody>
                 <?php
                 $no = 1;
-                foreach ($jenis_produk as $row){
+                foreach ($Pelanggan as $row){
 
                 ?>
                 <tr>
@@ -68,7 +72,9 @@ $jenis_produk = $model->Pelanggan();
                     <td><?= $row['tgl_lahir']?></td>
                     <td><?= $row['email']?></td>
                     <td><?= $row['alamat']?></td>
-                    <td><?= $row['kartu_id']?></td>
+                    <td><?= $row['nama']?></td>
+                    <td><?= $row['diskon']?></td>
+                    <td><?= $row['iuran']?></td>
                 </tr>
                 <?php
                 $no++;
