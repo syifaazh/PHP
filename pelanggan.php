@@ -23,8 +23,9 @@ $Pelanggan = $model->Pelanggan();
 </div>
 <div class="card mb-4">
     <div class="card-header">
-        <i class="fas fa-table me-1"></i>
-        DataTable Example
+        <!-- <i class="fas fa-table me-1"></i> -->
+        <!-- Membuat tomboh mengarahkan ke file produk_form.php -->
+        <a href="index.php?url=pelanggan_form" class="btn btn-primary btn-sm">Tambah</a>
     </div>
     <div class="card-body">
         <table id="datatablesSimple">
@@ -38,9 +39,10 @@ $Pelanggan = $model->Pelanggan();
                     <th>Tanggal Lahir</th>
                     <th>Email</th>
                     <th>Alamat</th>
-                    <th>Nama Kartu</th>
-                    <th>Diskon</th>
-                    <th>Iuran</th>
+                    <th>Id Kartu</th>
+                    <th>Kartu Member</th>
+                    <th>Action</th>
+
                 </tr>
             </thead>
             <tfoot>
@@ -53,9 +55,10 @@ $Pelanggan = $model->Pelanggan();
                     <th>Tanggal Lahir</th>
                     <th>Email</th>
                     <th>Alamat</th>
-                    <th>Nama Kartu</th>
-                    <th>Diskon</th>
-                    <th>Iuran</th>
+                    <th>Id Kartu</th>
+                    <th>Kartu Member</th>
+                    <th>Action</th>
+
             </tfoot>
             <tbody>
                 <?php
@@ -72,9 +75,17 @@ $Pelanggan = $model->Pelanggan();
                     <td><?= $row['tgl_lahir']?></td>
                     <td><?= $row['email']?></td>
                     <td><?= $row['alamat']?></td>
-                    <td><?= $row['nama']?></td>
-                    <td><?= $row['diskon']?></td>
-                    <td><?= $row['iuran']?></td>
+                    <td><?= $row['kartu_id']?></td>
+                    <td><?= $row['kartu_member']?></td>
+                    <td>
+                        <form action="pelanggan_controller.php" method="POST">
+                            <a class="btn btn-info btn-sm" href="index.php?url=pelanggan_detail&id=<?= $row ['id']?>">Detail</a>
+                            <a class="btn btn-warning btn-sm">Ubah</a>
+                            <a class="btn btn-danger btn-sm">Hapus</a>
+
+                            <input type="hidden" name="idx" value="<?= $row['id']?>" />
+                        </form>
+                    </td>
                 </tr>
                 <?php
                 $no++;
