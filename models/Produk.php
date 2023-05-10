@@ -44,5 +44,3 @@ class Produk
         $ps->execute([$id]);
         }
 }
-
-?>

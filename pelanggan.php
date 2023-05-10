@@ -63,36 +63,35 @@ $Pelanggan = $model->Pelanggan();
             <tbody>
                 <?php
                 $no = 1;
-                foreach ($Pelanggan as $row){
+                foreach ($Pelanggan as $row) {
 
                 ?>
-                <tr>
-                    <td><?= $no ?></td>
-                    <td><?= $row['kode']?></td>
-                    <td><?= $row['nama_pelanggan']?></td>
-                    <td><?= $row['jk']?></td>
-                    <td><?= $row['tmp_lahir']?></td>
-                    <td><?= $row['tgl_lahir']?></td>
-                    <td><?= $row['email']?></td>
-                    <td><?= $row['alamat']?></td>
-                    <td><?= $row['kartu_id']?></td>
-                    <td><?= $row['kartu_member']?></td>
-                    <td>
-                    <form action="pelanggan_controller.php" method="POST">
-                            <a class="btn btn-info btn-sm" href="index.php?url=pelanggan_detail&id=<?= $row ['id']?>">Detail</a>
-                            <a class="btn btn-warning btn-sm" href="index.php?url=pelanggan_form&idedit=<?= $row ['id']?>">Ubah</a>
-                            <button class="btn btn-danger btn-sm" name="proses" value="hapus"
-                            onclick="return confirm('Anda yakin akan dihapus?')">Hapus</button>
+                    <tr>
+                        <td><?= $no ?></td>
+                        <td><?= $row['kode'] ?></td>
+                        <td><?= $row['nama_pelanggan'] ?></td>
+                        <td><?= $row['jk'] ?></td>
+                        <td><?= $row['tmp_lahir'] ?></td>
+                        <td><?= $row['tgl_lahir'] ?></td>
+                        <td><?= $row['email'] ?></td>
+                        <td><?= $row['alamat'] ?></td>
+                        <td><?= $row['kartu_id'] ?></td>
+                        <td><?= $row['kartu_member'] ?></td>
+                        <td>
+                            <form action="pelanggan_controller.php" method="POST">
+                                <a class="btn btn-info btn-sm" href="index.php?url=pelanggan_detail&id=<?= $row['id'] ?>">Detail</a>
+                                <a class="btn btn-warning btn-sm" href="index.php?url=pelanggan_form&idedit=<?= $row['id'] ?>">Ubah</a>
+                                <button class="btn btn-danger btn-sm" name="proses" value="hapus" onclick="return confirm('Anda yakin akan dihapus?')">Hapus</button>
 
-                            <input type="hidden" name="idx" value="<?= $row['id']?>" />
-                        </form>
-                    </td>
-                </tr>
+                                <input type="hidden" name="idx" value="<?= $row['id'] ?>" />
+                            </form>
+                        </td>
+                    </tr>
                 <?php
-                $no++;
-                } 
+                    $no++;
+                }
                 ?>
-                
+
             </tbody>
         </table>
     </div>

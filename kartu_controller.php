@@ -31,6 +31,4 @@ switch($tombol){
     header('Location:index.php?url=kartu');
     break;
 }
-    header('Location:index.php?url=kartu'); 
-
-?>
+    header('Location:index.php?url=kartu');

@@ -22,7 +22,7 @@ $kartu = $model->getKartu($id);
                     <td><?= $kartu['nama'] ?></td>
                     <td><?= $kartu['diskon'] ?></td>
                     <td><?= $kartu['iuran'] ?></td>
-                    </tr>
+                </tr>
             </tbody>
         </table>
     </div>

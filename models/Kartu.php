@@ -39,5 +39,3 @@ class Kartu{
             $ps->execute([$id]);
             }
 }
-
-?>

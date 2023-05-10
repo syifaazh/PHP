@@ -60,34 +60,33 @@ $data_produk = $model->dataProduk();
             <tbody>
                 <?php
                 $no = 1;
-                foreach ($data_produk as $row){
+                foreach ($data_produk as $row) {
 
                 ?>
-                <tr>
-                    <td><?= $no ?></td>
-                    <td><?= $row['kode']?></td>
-                    <td><?= $row['nama']?></td>
-                    <td><?= $row['harga_beli']?></td>
-                    <td><?= $row['harga_jual']?></td>
-                    <td><?= $row['stok']?></td>
-                    <td><?= $row['min_stok']?></td>
-                    <td><?= $row['jenis_produk_id']?></td>
-                    <td>
-                        <form action="produk_controller.php" method="POST">
-                            <a class="btn btn-info btn-sm" href="index.php?url=produk_detail&id=<?= $row ['id']?>">Detail</a>
-                            <a class="btn btn-warning btn-sm" href="index.php?url=produk_form&idedit=<?= $row ['id']?>">Ubah</a>
-                            <button class="btn btn-danger btn-sm" name="proses" value="hapus"
-                            onclick="return confirm('Anda yakin akan dihapus?')">Hapus</button>
+                    <tr>
+                        <td><?= $no ?></td>
+                        <td><?= $row['kode'] ?></td>
+                        <td><?= $row['nama'] ?></td>
+                        <td><?= $row['harga_beli'] ?></td>
+                        <td><?= $row['harga_jual'] ?></td>
+                        <td><?= $row['stok'] ?></td>
+                        <td><?= $row['min_stok'] ?></td>
+                        <td><?= $row['jenis_produk_id'] ?></td>
+                        <td>
+                            <form action="produk_controller.php" method="POST">
+                                <a class="btn btn-info btn-sm" href="index.php?url=produk_detail&id=<?= $row['id'] ?>">Detail</a>
+                                <a class="btn btn-warning btn-sm" href="index.php?url=produk_form&idedit=<?= $row['id'] ?>">Ubah</a>
+                                <button class="btn btn-danger btn-sm" name="proses" value="hapus" onclick="return confirm('Anda yakin akan dihapus?')">Hapus</button>
 
-                            <input type="hidden" name="idx" value="<?= $row['id']?>" />
-                        </form>
-                    </td>
-                </tr>
+                                <input type="hidden" name="idx" value="<?= $row['id'] ?>" />
+                            </form>
+                        </td>
+                    </tr>
                 <?php
-                $no++;
-                } 
+                    $no++;
+                }
                 ?>
-                
+
             </tbody>
         </table>
     </div>

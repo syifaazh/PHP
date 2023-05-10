@@ -19,7 +19,7 @@ $pelanggan = $model->getPelanggan($id);
                     <th>Email</th>
                     <th>Alamat</th>
                     <th>Id Kartu</th>
-                   
+
 
                 </tr>
             </thead>

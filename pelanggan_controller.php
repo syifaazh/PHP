@@ -42,6 +42,4 @@ switch($tombol){
     header('Location:index.php?url=pelanggan');
     break;
 }
-    header('Location:index.php?url=pelanggan'); 
-
-?>
+    header('Location:index.php?url=pelanggan');

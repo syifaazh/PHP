@@ -41,5 +41,3 @@ class Pesanan{
         $ps->execute([$id]);
         }
 }
-
-?>

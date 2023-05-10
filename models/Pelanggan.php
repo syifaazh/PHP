@@ -41,5 +41,3 @@ class Pelanggan{
         $ps->execute([$id]);
     }
 }
-
-?>

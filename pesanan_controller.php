@@ -31,6 +31,4 @@ switch($tombol){
     header('Location:index.php?url=pesanan');
     break;
 }
-    header('Location:index.php?url=pesanan'); 
-
-?>
+    header('Location:index.php?url=pesanan');
