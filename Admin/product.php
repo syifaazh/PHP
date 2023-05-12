@@ -34,6 +34,7 @@ if (isset($sesi)) {
                 <a href="index.php?url=produk_form" class="btn btn-primary  btn-sm">Tambah</a>
             <?php } ?>
         </div>
+        
         <div class="card-body">
             <table id="datatablesSimple">
                 <thead>

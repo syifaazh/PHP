@@ -20,4 +20,3 @@ if(!empty($rs)){
 else {
     echo '<script> alert("user/password anda salah"); history.back();</script>';
 }
-?>
