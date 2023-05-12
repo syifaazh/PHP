@@ -13,10 +13,9 @@ $data = [
 
 $model = new Member();
 $rs = $model->ceklogin($data); //ceklogin ini diarahkan ke models/Member.php
-print_r($rs); die;
 if(!empty($rs)){
     $_SESSION['MEMBER'] = $rs;
-    header('Location:index.php?url=product');
+    header('Location:http://localhost/wEB_NATIF/Admin/index.php?url=product');
 }
 else {
     echo '<script> alert("user/password anda salah"); history.back();</script>';

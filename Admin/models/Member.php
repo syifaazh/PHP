@@ -8,15 +8,10 @@ class Member{
     }
     public function ceklogin($data)
     {
-        $password = md5($_POST['password']);
-        $sql = "SELECT * FROM member WHERE username = ? AND password = ?";
-        
+        $sql = "SELECT * FROM member WHERE username = ? AND password = SHA(MD5(SHA1(?)))";
         $ps = $this->koneksi->prepare($sql);
-        $ps->bindParam(1, $_POST['username']);
-        $ps->bindParam(2, $password);
         $ps->execute($data);
         $rs = $ps->fetch();
-
         return $rs;
     }
     
