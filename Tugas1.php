@@ -30,6 +30,7 @@
                     <input type='submit' name='luas' value='Luas'>
                     <input type='submit' name='kel' value='Keliling'>
                 </td>
+                
             </tr>
             </table>
             </table>
